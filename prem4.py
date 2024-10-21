@@ -13,7 +13,7 @@ class_mapping = {
 }
 
 # 라벨 파일 경로
-labels_dir = '/home/ecohi/data/test/labels'  # 라벨 파일이 있는 디렉토리 경로
+labels_dir = 'data/test/labels'  # 라벨 파일이 있는 디렉토리 경로
 
 # 라벨 파일 수정 함수
 def update_class_in_labels(label_file):
