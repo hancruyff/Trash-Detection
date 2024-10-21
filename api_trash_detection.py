@@ -18,13 +18,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MODEL_PATH = '/home/ecohi/api/runs/detect/train17/weights/best.pt'
+MODEL_PATH = 'runs/detect/train17/weights/best.pt'
 model = YOLO(MODEL_PATH)
 
 templates = Jinja2Templates(directory="templates")
 
-UPLOAD_DIR = '/www/upload/board_user_auth'
-RESULT_DIR = '/www/upload/board_user_auth_result'
+UPLOAD_DIR = 'board_user_auth'
+RESULT_DIR = 'result'
 
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
