@@ -14,7 +14,7 @@ class_mapping = {
 }
 
 # JSON 파일 경로
-json_dir = '/home/ecohi/data/'
+json_dir = 'data/'
 
 # JSON 파일 수정 함수
 def update_class_in_json(json_file):
