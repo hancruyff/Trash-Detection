@@ -5,8 +5,8 @@ if __name__ == "__main__":
     import yaml
 
     # 기본 경로 설정
-    model_path = '/home/ecohi/api/models/'  # 모델이 저장될 경로
-    data_path = '/home/ecohi/data/'          # 데이터 세트 경로
+    model_path = 'models/'  # 모델이 저장될 경로
+    data_path = 'data/'          # 데이터 세트 경로
 
     # 데이터 설정 파일(YAML) 생성
     data = {
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     # 학습 데이터 설정
     results = model.train(
         model='yolo11n.pt',  # 사전 학습된 모델 파일 이름
-        data='/home/ecohi/data/data.yaml',      # 데이터 설정 파일 경로
+        data='data/data.yaml',      # 데이터 설정 파일 경로
         epochs=10,           # 학습 에폭 수
         patience=5,          # 조기 종료 인내 값
         batch=16,            # 배치 크기
