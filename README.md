@@ -43,5 +43,5 @@ YOLO를 활용한 쓰레기 분류 모델
 
 테스트 이미지 기준 95%의 정확도
 
-<img src="https://github.com/user-attachments/assets/f43f289f-dda3-4e01-a6ca-44faf0c12db5" width="284" height="334"/>
-<img src="https://github.com/user-attachments/assets/b18f743e-a706-49ca-b3bf-1ae45d2262a6" width="284" height="334"/>
+<img src="https://github.com/user-attachments/assets/f43f289f-dda3-4e01-a6ca-44faf0c12db5" width="184" height="400"/>
+<img src="https://github.com/user-attachments/assets/b18f743e-a706-49ca-b3bf-1ae45d2262a6" width="184" height="400"/>
