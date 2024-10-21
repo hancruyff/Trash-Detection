@@ -5,6 +5,8 @@ YOLO를 활용한 쓰레기 분류 모델
 
 ## 전처리
 
+prem.py 파일들 라벨링에 따라 클래스 넘버->문자 or 문자->클래스 넘버
+
 이미지 속성 번역
 
 이미지 속성을 영어로 번역하는 딕셔너리를 설정하여, 데이터의 일관성을 유지합니다.
@@ -36,8 +38,45 @@ YOLO를 활용한 쓰레기 분류 모델
 이미지 크기를 640x640으로 조정하고 클래스 정보를 기반으로 데이터를 전처리합니다.
 
 최종적으로 필요한 데이터 파일을 지정된 경로로 분배
+## 데이터 구성
 
-##결과
+```
+data = {
+    'train': os.path.join(data_path, 'train/images'),
+    'val': os.path.join(data_path, 'val/images'),
+    'test': os.path.join(data_path, 'test/images'),
+    'names': ['metal', 'vinyl', 'styrofoam', 'glass', 'paper', 'plastic'],
+    'nc': 6  # 클래스 수
+}
+yaml_path = os.path.join(data_path, 'data.yaml')
+with open(yaml_path, 'w') as f:
+    yaml.dump(data, f)
+```
+
+데이터 경로와 클래스 이름을 설정하고, 이를 YAML 파일로 저장.
+
+## 학습 설정
+
+```
+results = model.train(
+    model='yolo11n.pt',
+    data='data/data.yaml',
+    epochs=10,
+    patience=5,
+    batch=16,
+    seed=42,
+    optimizer='AdamW',
+    pretrained=True,
+    device='cuda',
+    save=True,
+    save_period=1,
+    lr0=0.001
+)
+```
+
+지정된 하이퍼파라미터를 사용하여 모델 훈련.
+
+## 결과
 
 ![11111](https://github.com/user-attachments/assets/7328a4ca-77c9-47bd-a21d-61c399e84289)
 
