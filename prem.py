@@ -10,8 +10,8 @@ if __name__ == '__main__':
     dataset_path = '생활 폐기물 이미지'
 
     # 데이터 저장 경로 설정
-    data_path = '/home/ecohi/data/'
-    backup_path = '/home/ecohi/backup'
+    data_path = 'data/'
+    backup_path = 'backup'
 
     # 클래스 정보 딕셔너리
     classes = {'0': '고철류/캔류', '1': '비닐류', '2': '스티로폼류', '3': '유리병류', '4': '종이류', '5': '플라스틱류'}
