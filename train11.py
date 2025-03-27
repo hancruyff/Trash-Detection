@@ -22,7 +22,7 @@ if __name__ == "__main__":
         yaml.dump(data, f)
 
     # YOLO 모델 초기화 (사전 학습된 모델 사용)
-    model = YOLO('yolo11n.pt')  # 'yolov8n.yaml' 대신 'yolov8n.pt' 사용
+    model = YOLO('yolo11n.pt')  # 'yolo11n.pt' 사용
 
     # CUDA 사용
     model.to('cuda')
