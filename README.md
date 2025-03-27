@@ -18,7 +18,7 @@
 ## 🛠 기술 스택
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/> <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white"/> <img src="https://img.shields.io/badge/YOLO-00FFFF?style=for-the-badge"/> <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"/>
 
-- **YOLOv8**: 객체 탐지 모델 사용
+- **YOLOv11**: 객체 탐지 모델 사용
 - **OpenCV**: 이미지 전처리 및 시각화
 - **FastAPI**: RESTful API 개발
 - **NumPy**: 데이터 처리 및 연산
@@ -56,7 +56,7 @@ async def predict(file: UploadFile = File(...)):
     
     return {"detections": label_counts}
 ```
-- **YOLOv8을 사용하여 객체 탐지**를 수행합니다.
+- **YOLOv11을 사용하여 객체 탐지**를 수행합니다.
 - 사용자가 업로드한 이미지에서 **쓰레기 종류 및 개수를 분석**합니다.
 - 결과는 **JSON 형태**로 반환됩니다.
 
@@ -80,6 +80,6 @@ model.export(format="onnx")
 - API를 통해 **다른 서비스에서도 객체 탐지 기능을 사용할 수 있습니다**.
 
 ## 🔄 향후 개선 사항
-✅ 탐지 정확도를 높이기 위해 **YOLOv8 기반 하이퍼파라미터 튜닝** 예정  
+✅ 탐지 정확도를 높이기 위해 **YOLOv11 기반 하이퍼파라미터 튜닝**  
 ✅ 대시보드 추가하여 **탐지 결과 시각화 및 로그 관리 기능 제공**  
 ✅ 더 다양한 쓰레기 종류를 학습할 수 있도록 **데이터셋 확장**  
