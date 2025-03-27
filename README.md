@@ -64,7 +64,7 @@ async def predict(file: UploadFile = File(...)):
 ```python
 from ultralytics import YOLO
 
-model = YOLO("yolov8n.pt")
+model = YOLO("yolov11n.pt")
 model.train(data="trash_dataset.yaml", epochs=50, imgsz=640)
 model.export(format="onnx")
 ```
